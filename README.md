@@ -12,7 +12,6 @@ N/A
 
 ### Installation 
 - git clone `git clone https://github.com/nati2323/Book-store` .
-- Type `cd Book-store`.:
 
 Download all the dependencies run:
 
