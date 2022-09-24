@@ -8,8 +8,7 @@ import {
 } from 'react-router-dom';
 import Books from './components/Books/BookContainer';
 import Category from './components/CategoriesPage/categories';
-import "./index.css";
-
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,7 +20,7 @@ ReactDOM.render(
           <li><Link to="/CATEGORIES">CATEGORIES </Link></li>
         </ul>
         
-      </nav>
+</nav>
       <Switch>
         <Route exact path="/"><Books /></Route>
         <Route path="/CATEGORIES"><Category /></Route>
