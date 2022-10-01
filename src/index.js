@@ -1,31 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-} from 'react-router-dom';
-import Books from './components/Books/BookContainer';
-import Category from './components/CategoriesPage/categories';
-import './index.css';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import store from './redux/configureStore';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <Router>
-      <nav>
-        <h1>Bookstore CMS</h1>
-        <ul>
-          <li><Link to="/">Books</Link></li>
-          <li><Link to="/CATEGORIES">CATEGORIES </Link></li>
-        </ul>
-        
-</nav>
-      <Switch>
-        <Route exact path="/"><Books /></Route>
-        <Route path="/CATEGORIES"><Category /></Route>
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
